@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrdnndtsch/portfolio.git"
+  },
+  "author": "Jordan Deutsch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrdnndtsch/portfolio/issues"
+  },
+  "homepage": "https://github.com/jrdnndtsch/portfolio"
+}
