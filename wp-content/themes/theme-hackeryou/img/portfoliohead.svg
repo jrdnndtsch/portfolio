@@ -1,0 +1,56 @@
+<svg width="600px" height="336px" viewBox="0 0 600 336" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+  
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="600" height="336"></rect>
+        <text id="ABOUT" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="12" font-weight="normal" fill="#070707">
+            <tspan x="195.75" y="164.5">ABOUT</tspan>
+        </text>
+        <path d="M576,28 L26,28" id="Line" stroke="#070707" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M576,308 L26,308" id="Line-2" stroke="#070707" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M576,28.5 L576,307.5" id="Line-3" stroke="#070707" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M26,28 L26,307" id="Line-4" stroke="#070707" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <rect id="Rectangle-1" fill="#070707" sketch:type="MSShapeGroup" x="27" y="29" width="53" height="48"></rect>
+        <text id="JD" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="26" font-weight="260" letter-spacing="1.85714293" fill="#FFFFFF">
+            <tspan x="35" y="59">JD</tspan>
+        </text>
+        <path d="M28.5,106.75 L573.5,106.75" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M28.5,150.25 L573.5,150.25" id="Line-5" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M25,222.25 L576,223.25" id="Line-7" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <text id="JORDAN-DEUTSCH" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="33" font-weight="normal" fill="#070707">
+            <tspan x="290" y="93.5">JORDAN DEUTSCH</tspan>
+        </text>
+        <text id="FRONT-END-WEB-DEVELO" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="20" font-weight="normal" fill="#070707">
+            <tspan x="162" y="137">FRONT-END WEB DEVELOPER</tspan>
+        </text>
+        <path d="M73.75,150.5 L73.75,307.5" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M524.75,150.5 L524.75,307.5" id="Line-6" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M191.75,150.5 L191.75,222.5" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M349.75,150.5 L349.75,222.5" id="Line-10" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M28.5,150.25 L573.5,150.25" id="Line-8" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <polygon id="Triangle-1" stroke="#070707" stroke-width="1.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(45.000000, 222.500000) rotate(-90.000000) translate(-45.000000, -222.500000) " points="45 214 55 231 35 231 "></polygon>
+        <polygon id="Triangle-2" stroke="#070707" stroke-width="1.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(554.000000, 223.500000) scale(-1, -1) rotate(-90.000000) translate(-554.000000, -223.500000) " points="554 215 564 232 544 232 "></polygon>
+        <path d="M35.25,209.5 L35.25,232.5" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M563.25,211.5 L563.25,234.5" id="Line-9" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <text id="RECENT-WORK" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="12" font-weight="normal" fill="#070707">
+            <tspan x="77" y="238.5">RECENT WORK</tspan>
+        </text>
+        <text id="CONTACT" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="12" font-weight="normal" fill="#070707">
+            <tspan x="77" y="164.5">CONTACT</tspan>
+        </text>
+        <text id="BLOG" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="12" font-weight="normal" fill="#070707">
+            <tspan x="356" y="164">BLOG</tspan>
+        </text>
+        <text id="Say-Hello" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="16" font-weight="normal" fill="#070707">
+            <tspan x="89" y="199">Say Hello</tspan>
+        </text>
+        <text id="Jordan-" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="16" font-weight="normal" fill="#070707">
+            <tspan x="239" y="199">Jordan </tspan>
+        </text>
+        <text id="Tips-&amp;-Tricks" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="16" font-weight="normal" fill="#070707">
+            <tspan x="373" y="199">Tips &amp; Tricks</tspan>
+        </text>
+        <text id="Portfolio" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="20" font-weight="normal" fill="#070707">
+            <tspan x="246" y="278">Portfolio</tspan>
+        </text>
+    </g>
+</svg>

@@ -266,6 +266,32 @@ footer {
       padding: 5%; }
 
 /* =============================================================================
+                   Home Page / page-home.php
+   ========================================================================== */
+.hero {
+  background: lightblue;
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .hero .heroSVG {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+
+.about {
+  font-family: 'Andale Mono', monospace;
+  font-size: 20px;
+  padding: 80px;
+  text-align: center; }
+  .about p {
+    line-height: 2; }
+
+.featuredPortfolio {
+  background: red; }
+
+/* =============================================================================
                    Blog Landing Page / Index.php
  ========================================================================== */
 .blogRoll .blogPost {
@@ -307,6 +333,11 @@ footer {
       padding: 20px 10px; }
     .blogRoll .blogPost .blogInfo p {
       padding: 20px 10px; }
+    .blogRoll .blogPost .blogInfo .readMore {
+      font-family: 'Andale Mono', monospace;
+      position: absolute;
+      bottom: 10px;
+      left: 10px; }
   .blogRoll .blogPost .blogImg {
     width: 25%;
     float: left;
