@@ -1,9 +1,5 @@
+
 <?php
-
-/*
-	Template Name: Custom About
-*/
-
 get_header();  ?>
 
 <div class="main">
