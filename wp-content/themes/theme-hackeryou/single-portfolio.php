@@ -4,7 +4,7 @@
   <div class="container">
 
      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        
+        <div class="portfolioPieces clearfix">
        <h2><?php the_title(); ?></h2>
        <h4><?php the_field('project_type'); ?></h4>
       <div class="technologies">
@@ -23,7 +23,7 @@
           ?>
         </div> <!-- end .tech -->
      </div><!--  end. technologies -->
-     <div class="portfolioDescription">
+     <div class="portfolioDescription clearfix">
        <?php 
         while(have_rows('display_image'))  : the_row();
         ?>
@@ -38,10 +38,8 @@
         <div class="viewLive">
           <p>View Live</p>
         </div><!--  end .viewLive -->
-         <?php $image = get_field('featured_image') ?>
-        <img src="<?php echo $image ['sizes'] ['medium'] ?>" alt="">
 
-      
+      </div> <!-- end .portfolioPieces -->
         <?php endif; ?>
        
      <?php endwhile; // end of the loop. ?>

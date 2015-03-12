@@ -70,6 +70,22 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+
+  wp_enqueue_script(
+  	'walkway',
+  	"http://cdn.jsdelivr.net/walkway/0.0.1/walkway.min.js",
+  	false,
+  	null,
+  	true
+  	);
+
+  wp_enqueue_script(
+  	'wscript', 
+  	get_template_directory_uri() . '/js/walkway.min.js',
+  	array('jquery', 'plugins'),
+  	null,
+  	true
+  	);
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );

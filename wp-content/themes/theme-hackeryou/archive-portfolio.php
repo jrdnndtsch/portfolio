@@ -5,10 +5,9 @@
 
     <div class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+      <div class="portfolioPieces">
         <h2><?php the_title(); ?></h2>
-        <h4><?php the_field('project_type'); ?></h4>
-        <p><?php the_field('short_desc') ?></p>
+        <p class="type"><?php the_field('project_type'); ?></p>
        <div class="technologies">
          <?php
          $terms = get_the_terms( $post->ID, 'technologies' ); if ( $terms && ! is_wp_error( $terms ) ) : 
@@ -24,17 +23,21 @@
             }       
            ?>
          </div> <!-- end .tech -->
+        <p><?php the_field('short_desc') ?></p>
 
+        <?php get_permalink(); ?>
          <div class="viewLive">
-           <p>View Live</p>
+           <a href="<?php echo get_permalink() ?>"><p>Learn More</p></a>
+         </div>
+         <div class="viewLive">
+           <a href="#"><p>View Live</p></a>
          </div><!--  end .viewLive -->
           <?php $image = get_field('featured_image') ?>
-         <img src="<?php echo $image ['sizes'] ['medium'] ?>" alt="">
+         <!-- <img src="<?php echo $image ['sizes'] ['medium'] ?>" alt=""> -->
        
-
-
          <?php endif; ?>
       </div><!--  end. technologies -->
+  </div> <!-- end .portfolioPieces -->
         
       <?php endwhile; // end of the loop. ?>
 
@@ -42,7 +45,6 @@
 
 
     </div> <!-- /.content -->
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

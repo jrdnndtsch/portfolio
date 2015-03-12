@@ -171,7 +171,8 @@ img.alignright {
    ========================================================================== */
 body {
   color: #222;
-  font-family: 'Avenir Next', 'Helvetica', sans-serif; }
+  font-family: 'Avenir Next', 'Helvetica', sans-serif;
+  width: 100%; }
 
 .container {
   max-width: 1050px;
@@ -243,27 +244,9 @@ footer {
 /* =============================================================================
                    Navigation
    ========================================================================== */
-.homeWrapper {
-  width: 100%;
-  height: 100vh;
-  position: relative; }
-  .homeWrapper .homeInfo {
-    border: 3px solid #222;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    width: 500px; }
-    .homeWrapper .homeInfo h2, .homeWrapper .homeInfo h1, .homeWrapper .homeInfo h3 {
-      display: inline-block;
-      margin: 0;
-      display: block; }
-    .homeWrapper .homeInfo h2 {
-      background: #222;
-      color: white;
-      width: 20%;
-      padding: 5%; }
+.topNav {
+  margin: 0 auto;
+  text-align: center; }
 
 /* =============================================================================
                    Home Page / page-home.php
@@ -277,22 +260,156 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); }
+    transform: translate(-100%, -50%);
+    -webkit-transform: translate(-100%, -50%); }
 
 .about {
   font-family: 'Andale Mono', monospace;
   font-size: 20px;
-  padding: 80px;
+  padding: 120px 80px;
   text-align: center; }
   .about p {
     line-height: 2; }
 
+.subHead {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  padding: 0 20px; }
+
 .featuredPortfolio {
-  background: red; }
+  padding: 25px;
+  width: 33%;
+  height: 400px;
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px dotted #222;
+  margin-bottom: 100px; }
+  .featuredPortfolio:last-child {
+    border: none; }
+  .featuredPortfolio h2 {
+    font-family: 'Andale Mono', monospace;
+    margin: 0;
+    margin-bottom: 20px; }
+  .featuredPortfolio .type {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    margin-bottom: 20px; }
+  .featuredPortfolio .tech {
+    margin-bottom: 20px; }
+    .featuredPortfolio .tech .tech {
+      background: #222;
+      color: white;
+      margin: 5px;
+      padding: 5px;
+      font-family: 'Andale Mono', monospace; }
+  .featuredPortfolio .desc {
+    margin-bottom: 20px; }
+  .featuredPortfolio .viewLive {
+    background: #222;
+    color: white;
+    display: inline-block;
+    padding: 7px 25px;
+    border: 2px solid #222; }
+    .featuredPortfolio .viewLive:hover {
+      background: white;
+      color: lime;
+      cursor: pointer; }
+    .featuredPortfolio .viewLive:hover a {
+      color: lime; }
+    .featuredPortfolio .viewLive a {
+      color: white; }
+    .featuredPortfolio .viewLive p {
+      margin: 0; }
+
+@media (max-width: 960px) {
+  .featuredPortfolio {
+    width: 100%;
+    height: none;
+    border-right: none;
+    border-bottom: 1px dotted #222;
+    margin-bottom: 50px; }
+    .featuredPortfolio:last-child {
+      border-bottom: none; }
+  .about {
+    font-size: 18px;
+    padding: 80px 60px; } }
+
+@media (max-width: 600px) {
+  .hero {
+    height: 60vh; }
+  .about {
+    padding: 25px 20px; } }
 
 /* =============================================================================
                    Blog Landing Page / Index.php
+ ========================================================================== */
+.portfolioPieces {
+  padding: 50px;
+  display: block;
+  margin: 10px;
+  border-bottom: 1px dotted #222; }
+  .portfolioPieces:last-child {
+    border: none; }
+  .portfolioPieces h2 {
+    font-family: 'Andale Mono', monospace;
+    margin: 0;
+    margin-bottom: 20px; }
+  .portfolioPieces .type {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    margin-bottom: 20px; }
+  .portfolioPieces .tech {
+    margin-bottom: 20px; }
+    .portfolioPieces .tech .tech {
+      background: #222;
+      color: white;
+      margin: 5px;
+      padding: 5px;
+      font-family: 'Andale Mono', monospace; }
+  .portfolioPieces .desc {
+    margin-bottom: 20px; }
+  .portfolioPieces .viewLive {
+    background: #222;
+    color: white;
+    display: inline-block;
+    padding: 7px 25px;
+    margin-right: 10px;
+    border: 2px solid #222; }
+    .portfolioPieces .viewLive:hover {
+      background: white;
+      color: lime;
+      cursor: pointer; }
+    .portfolioPieces .viewLive:hover a {
+      color: lime; }
+    .portfolioPieces .viewLive a {
+      color: white; }
+    .portfolioPieces .viewLive p {
+      margin: 0; }
+  .portfolioPieces .portfolioDescription img {
+    float: left;
+    width: 55%;
+    margin-right: 5%;
+    margin-bottom: 100px; }
+  .portfolioPieces .portfolioDescription p {
+    width: 40%;
+    float: left;
+    padding: 20px 0; }
+
+@media (max-width: 790px) {
+  .portfolioPieces .portfolioDescription img {
+    width: 100%;
+    border: 2px solid red;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .portfolioPieces .portfolioDescription p {
+    width: 100%; } }
+
+/* =============================================================================
+                  Portfolio Landing Page + Single 
  ========================================================================== */
 .blogRoll .blogPost {
   border: 3px solid #222;
@@ -302,29 +419,30 @@ footer {
   .blogRoll .blogPost .colorSquare {
     height: 250px;
     width: 72%;
-    background: lightpink;
+    background: #FFE1CA;
     top: -30%;
     left: -5%;
     z-index: -1;
     position: absolute; }
   .blogRoll .blogPost:nth-child(2n) .colorSquare {
-    background: lightgreen;
+    background: #D4F2F3;
     top: 10%;
     left: 30%;
     width: 80%; }
   .blogRoll .blogPost:nth-child(3n) .colorSquare {
-    background: lightyellow;
-    top: -10%;
+    background: #FFF8A1;
+    top: -30%;
     left: -20%;
     width: 60%; }
   .blogRoll .blogPost:nth-child(4n) .colorSquare {
-    background: lightblue;
+    background: #DBF3D0;
     top: 25%;
     left: 50%;
     width: 70%; }
   .blogRoll .blogPost .blogInfo {
     width: 70%;
-    float: left; }
+    float: left;
+    border-right: 2px solid #222; }
     .blogRoll .blogPost .blogInfo h2 {
       font-family: 'Andale Mono', monospace;
       font-size: 20px;
@@ -332,7 +450,8 @@ footer {
       margin: 0;
       padding: 20px 10px; }
     .blogRoll .blogPost .blogInfo p {
-      padding: 20px 10px; }
+      padding: 20px 10px;
+      margin-bottom: 25px; }
     .blogRoll .blogPost .blogInfo .readMore {
       font-family: 'Andale Mono', monospace;
       position: absolute;
@@ -341,14 +460,37 @@ footer {
   .blogRoll .blogPost .blogImg {
     width: 25%;
     float: left;
-    height: 250px;
-    position: relative;
-    border-left: 2px solid #222; }
+    position: relative; }
     .blogRoll .blogPost .blogImg img {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+
+/* =============================================================================
+                   FOOTER
+   ========================================================================== */
+.containerFooter {
+  background: #222;
+  color: white; }
+  .containerFooter .contact {
+    font-size: 16px;
+    font-family: 'Andale Mono', monospace;
+    text-align: center;
+    padding-top: 10px; }
+    .containerFooter .contact a {
+      color: white;
+      display: block;
+      text-align: left;
+      margin: 0;
+      margin-left: 20px;
+      padding: 5px; }
+      .containerFooter .contact a:hover {
+        color: lime; }
+  .containerFooter .copy {
+    float: right;
+    margin-top: 0;
+    margin-right: 20px; }
 
 /* =============================================================================
                    Comment Styling

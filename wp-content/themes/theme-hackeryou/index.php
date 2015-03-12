@@ -12,7 +12,7 @@
         		 <a href="<?php echo get_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
         		<p><?php the_field('teaser'); ?></p>
                 <?php get_permalink(); ?>
-                <a class="readMore" href="<?php echo get_permalink(); ?>">read more</a>
+                <a class="readMore clearfix" href="<?php echo get_permalink(); ?>">read more</a>
             </div>
             <div class="blogImg clearfix">
                 <?php $feat_image= wp_get_attachment_url(get_post_thumbnail_id($aboutid[0], 'thumbnail-size', true));
