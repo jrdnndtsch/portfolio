@@ -33,7 +33,8 @@ get_header();  ?>
                     <a class="link" xlink:href="<?php echo get_permalink(2); ?>"><tspan x="290" y="93.5">JORDAN DEUTSCH</tspan></a>
                 </text>
                 <text id="FRONT-END-WEB-DEVELO" sketch:type="MSTextLayer" font-family="Andale Mono" font-size="20" font-weight="normal" fill="#070707">
-                    <tspan x="162" y="137">FRONT-END WEB DEVELOPER</tspan>
+                    <tspan x="162" y="137">FRONT-END WEB</tspan>
+                    <tspan id="dev">DEVELOPER</tspan>
                 </text>
                 <path d="M73.75,150.5 L73.75,307.5" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
                 <path d="M524.75,150.5 L524.75,307.5" id="Line-6" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
