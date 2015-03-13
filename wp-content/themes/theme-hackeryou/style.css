@@ -229,8 +229,9 @@ ul li, ol li {
 pre {
   background: #F7F7F7;
   padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc; }
+  font-family: 'American Typewriter', monospace;
+  font-weight: lighter;
+  font-size: 18px; }
 
 /* =============================================================================
                    Footer
@@ -298,12 +299,15 @@ footer {
     margin-bottom: 20px; }
   .featuredPortfolio .tech {
     margin-bottom: 20px; }
-    .featuredPortfolio .tech .tech {
-      background: #222;
-      color: white;
-      margin: 5px;
-      padding: 5px;
-      font-family: 'Andale Mono', monospace; }
+    .featuredPortfolio .tech ul {
+      padding: 0; }
+      .featuredPortfolio .tech ul .tech {
+        background: #222;
+        color: white;
+        margin: 5px;
+        padding: 5px;
+        font-family: 'Andale Mono', monospace;
+        display: inline-block; }
   .featuredPortfolio .desc {
     margin-bottom: 20px; }
   .featuredPortfolio .viewLive {
@@ -311,7 +315,8 @@ footer {
     color: white;
     display: inline-block;
     padding: 7px 25px;
-    border: 2px solid #222; }
+    border: 2px solid #222;
+    margin: 5px 0; }
     .featuredPortfolio .viewLive:hover {
       background: white;
       color: lime;
@@ -326,7 +331,7 @@ footer {
 @media (max-width: 960px) {
   .featuredPortfolio {
     width: 100%;
-    height: none;
+    height: 500px;
     border-right: none;
     border-bottom: 1px dotted #222;
     margin-bottom: 50px; }
@@ -376,6 +381,7 @@ footer {
     color: white;
     display: inline-block;
     padding: 7px 25px;
+    margin: 5px 0;
     margin-right: 10px;
     border: 2px solid #222; }
     .portfolioPieces .viewLive:hover {
@@ -390,22 +396,53 @@ footer {
       margin: 0; }
   .portfolioPieces .portfolioDescription img {
     float: left;
-    width: 55%;
-    margin-right: 5%;
+    width: 68%;
+    margin-right: 2%;
     margin-bottom: 100px; }
   .portfolioPieces .portfolioDescription p {
-    width: 40%;
+    width: 30%;
     float: left;
     padding: 20px 0; }
 
+.technologies ul {
+  padding: 0; }
+  .technologies ul .tech {
+    display: inline-block;
+    margin: 5px; }
+
 @media (max-width: 790px) {
-  .portfolioPieces .portfolioDescription img {
-    width: 100%;
-    border: 2px solid red;
-    margin-top: 20px;
-    margin-bottom: 10px; }
-  .portfolioPieces .portfolioDescription p {
-    width: 100%; } }
+  .portfolioPieces {
+    padding: 20px; }
+    .portfolioPieces .portfolioDescription img {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 10px; }
+    .portfolioPieces .portfolioDescription p {
+      width: 100%; } }
+
+.contPost {
+  max-width: 960px;
+  margin: 0 auto; }
+  .contPost .portfolioPage {
+    margin: 100px 10px; }
+    .contPost .portfolioPage h2 {
+      font-family: 'Andale Mono';
+      font-size: 28px; }
+    .contPost .portfolioPage p {
+      line-height: 2;
+      font-size: 18px; }
+    .contPost .portfolioPage .back {
+      background: #222;
+      color: white;
+      border: 2px solid #222;
+      padding: 10px 20px; }
+      .contPost .portfolioPage .back:hover {
+        color: lime;
+        background: white; }
+
+@media (max-width: 600px) {
+  .contPost .portfolioPage {
+    margin: 50px 5px; } }
 
 /* =============================================================================
                   Portfolio Landing Page + Single 

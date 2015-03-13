@@ -17,11 +17,14 @@
           }             
          ?>
          <div class="tech">
+         <ul>
           <?php 
             foreach($technologies_links as $tech) {
-              echo "<span class='tech'>" . $tech . "</span>";
+
+              echo "<li class='tech'>" . $tech . "</li>";
             }       
            ?>
+           </ul>
          </div> <!-- end .tech -->
         <p><?php the_field('short_desc') ?></p>
 
@@ -29,8 +32,9 @@
          <div class="viewLive">
            <a href="<?php echo get_permalink() ?>"><p>Learn More</p></a>
          </div>
+         
          <div class="viewLive">
-           <a href="#"><p>View Live</p></a>
+           <a href="<?php the_field('live'); ?>" target="_"><p>View Live</p></a>
          </div><!--  end .viewLive -->
           <?php $image = get_field('featured_image') ?>
          <!-- <img src="<?php echo $image ['sizes'] ['medium'] ?>" alt=""> -->

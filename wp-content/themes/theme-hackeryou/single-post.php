@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container contPost">
 
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <div class="content portfolioPage">
@@ -12,6 +12,8 @@
         </div>
           
           <p><?php the_content(); ?><p>
+          <?php get_permalink(50); ?>
+          <a class="back" href="<?php echo get_permalink(50)?>">Back to Blog</a>
       </div> <!-- /.content .portfolioPage -->
       <?php endwhile; // end of the loop. ?>
   </div> <!-- /.container -->

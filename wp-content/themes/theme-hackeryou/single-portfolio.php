@@ -16,11 +16,13 @@
          }             
         ?>
         <div class="tech">
+        <ul>
          <?php 
            foreach($technologies_links as $tech) {
-             echo "<span class='tech'>" . $tech . "</span>";
+             echo "<li class='tech'>" . $tech . "</li>";
            }       
           ?>
+         </ul> 
         </div> <!-- end .tech -->
      </div><!--  end. technologies -->
      <div class="portfolioDescription clearfix">
@@ -36,7 +38,7 @@
      </div> <!-- end .portfolioDescription -->
 
         <div class="viewLive">
-          <p>View Live</p>
+          <a href="<?php the_field('live'); ?>" target="_"><p>View Live</p></a>
         </div><!--  end .viewLive -->
 
       </div> <!-- end .portfolioPieces -->

@@ -139,6 +139,7 @@ get_header();  ?>
           <h2><?php the_title(); ?></h2>
           <p class="type"><?php the_field('project_type') ?></p>
           <div class="tech">
+          <ul>
             <?php
               $terms = get_the_terms( $post->ID, 'technologies' ); if ( $terms && ! is_wp_error( $terms ) ) : 
               $technologies_links = array();
@@ -148,9 +149,10 @@ get_header();  ?>
             ?>
             <?php 
               foreach($technologies_links as $tech) {
-              echo "<span class='tech'>" . $tech . "</span>";
+              echo "<li class='tech'>" . $tech . "</li>";
             }       
            ?>
+           </ul>
          </div> <!-- end .tech -->
          <div class="desc">
             <p> <?php the_field('short_desc'); ?></p>
