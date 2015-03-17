@@ -37,6 +37,18 @@ $(function(){
 		jdp.newtext();
 	});
 
+	$('.navicon').on('click', function(){
+		$('.naviconIcon').toggleClass('naviconIcon2');
+		$('.dropDown').slideToggle(800);
+		$('.logoSquare').fadeToggle(800);
+		if ($('.logoSquare').css('display') === 'block') {
+			$('.logoSquare').css('display', '');
+		}
+	});
+	$('.logoRect').on('click', function(){
+		$('.dropMenu').slideToggle(800);
+	});
+
 });
 
 

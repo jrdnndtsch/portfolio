@@ -2,10 +2,10 @@
   <div class="containerFooter clearfix">
   	<div class="contact" id="contact">
   		<a href="mailto:hello@jordandeutsch.com?Subject=Hello" >e. hello@jordandeutsch.com</a>
-  		<a href="https://twitter.com/jrdnndtsch?lang=en" target="_">t. @jordnndtsch</a>
+  		<a href="https://twitter.com/jrdnndtsch?lang=en" target="_">t. @jrdnndtsch</a>
   		<a href="https://github.com/jrdnndtsch" target="_">g. github.com/jrdnndtsch</a>
-  	</div>
     <p class="copy">&copy; Jordan Deutsch <?php echo date('Y'); ?></p>
+  	</div>
   </div>
 </footer>
 

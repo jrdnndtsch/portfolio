@@ -121,14 +121,38 @@ pre {
 }
 
 
-
-
+/* =============================================================================
+                 MENU GLOBAL / Header.php
+   ========================================================================== */
+.dropMenu{
+  display: none;
+  ul{
+    list-style: none;
+    padding: 0;
+    li{
+        padding: 10px 25px;
+        display: inline-block;
+        font-size: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        letter-spacing: 2px;
+        &:hover{
+          color: lime;
+        }
+    }
+  }
+}
 /* =============================================================================
                    Footer
    ========================================================================== */
 
 footer {
   clear:both;
+}
+
+.contact{
+  max-width: 1350px;
+  margin:0 auto;
 }
 
 
@@ -165,14 +189,129 @@ footer {
   }
 }
 
+.navicon{
+      cursor: pointer;
+      position: relative;
+      z-index: 9999;
+      top:10px;
+      right: 25px ;
+      float: right;
+      padding: 50px;
+      display: none;
+      .naviconIcon, .naviconIcon:before, .naviconIcon:after{
+        content: '';
+        height: 2px;
+        width: 35px;
+        background: #222;
+        position: absolute;
+        display: block;
+        transition: all .5s ease-in-out;
+      }
+      .naviconIcon:before{
+        top: -10px;
+      }
+      .naviconIcon:after{
+        bottom: -10px;
+      }
+    }  
+.navicon{
+   .naviconIcon2{
+    cursor: pointer;
+    background-color:transparent;
+   }
+   .naviconIcon2:before, .naviconIcon2:after{
+    content:'';
+    height: 2px;
+    width: 35px;
+    background: #222;
+    position: absolute;
+    display: block;
+    transition: all .5s ease-in-out;
+    top:0;
+   }
+   .naviconIcon2:before{
+    transform:rotate(-45deg);
+    
+   }
+   .naviconIcon2:after{
+
+    transform:rotate(45deg);
+
+   }
+}   
+
+.dropDown{
+  height: 60vh;
+  width: 100%;
+  background: rgba(255,255,255,0.7);
+  display: none;
+  position: absolute;
+  top:0;
+  left:0;
+  ul{
+    list-style: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+      padding:0;
+    li{
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-align: center;
+      cursor: pointer;
+      padding:5px;
+      text-transform: uppercase;
+      &:hover{
+        color: lime
+      }
+    }
+  }
+}
+.logoSquare{
+  padding: 10px;
+  display: none;
+  background: white;
+  position: absolute;
+  color: #222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  p{
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 40px;
+    border: 5px solid #222;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.none{
+  display: none;
+}
 .about{
   font-family: 'Andale Mono', monospace;
   font-size: 20px;
-  padding: 100px 120px;
-  // text-align: center;
-  p{
-    line-height: 2;
-  }
+  padding: 100px 0;
+  display: block;
+  margin:10px 0;
+  .aboutText{
+    float: right;
+    width: 70%;
+    p{
+      line-height: 2;
+    }
+  }  
+}
+.profpic{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-right: 50px;
+  margin-top: 20px;
+  float: left;
 }
 
 .subHead{
@@ -192,6 +331,7 @@ footer {
   vertical-align:top;
   border-right: 1px dotted #222;
   margin-bottom: 100px;
+  position: relative;
   &:last-child{
     border:none;
   }
@@ -223,6 +363,10 @@ footer {
   .desc{
     margin-bottom: 20px;
   }
+  .viewButtons{
+    position: absolute;
+    bottom: 20px;
+  }
   .viewLive{
     background:#222;
     color: white;
@@ -247,10 +391,11 @@ footer {
   }
  
 }
-@media (max-width: 960px){
+
+@media (max-width: 980px){
   .featuredPortfolio{
     width: 100%;
-    height: 500px;
+    height: 350px;
     border-right: none;
     border-bottom: 1px dotted #222;
     margin-bottom: 50px;
@@ -261,7 +406,18 @@ footer {
   .about{
     font-size: 18px;
     padding: 80px 60px;
+    .aboutText{
+      width: 100%;
+      margin: 25px 0;
+    }
+    .profpic{
+      margin: 0 auto;
+      width: 250px;
+      float: none;
+      display: block;
+    }
   }
+
 };
 
 @media (max-width: 600px){
@@ -273,6 +429,26 @@ footer {
   }
   .featuredPortfolio{
     // margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 460px) {
+  .logoSquare {
+    display: none;
+  }
+}
+
+@media (max-width: 460px){
+  .hero{
+    .heroSVG{
+        display: none;
+    }
+  }
+  .navicon{
+    display: inline-block;
+  }
+  .logoSquare{
+    display: block;
   }
 }
 /* =============================================================================
@@ -291,6 +467,12 @@ footer {
      font-family: 'Andale Mono', monospace;
      margin:0;
      margin-bottom:20px;
+   }
+   h4{
+    font-family: 'Andale Mono';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
    }
    .type{
      text-transform: uppercase;

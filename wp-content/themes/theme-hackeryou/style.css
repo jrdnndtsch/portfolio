@@ -234,10 +234,32 @@ pre {
   font-size: 18px; }
 
 /* =============================================================================
+                 MENU GLOBAL / Header.php
+   ========================================================================== */
+.dropMenu {
+  display: none; }
+  .dropMenu ul {
+    list-style: none;
+    padding: 0; }
+    .dropMenu ul li {
+      padding: 10px 25px;
+      display: inline-block;
+      font-size: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 2px; }
+      .dropMenu ul li:hover {
+        color: lime; }
+
+/* =============================================================================
                    Footer
    ========================================================================== */
 footer {
   clear: both; }
+
+.contact {
+  max-width: 1350px;
+  margin: 0 auto; }
 
 /* =============================================================================
                    Footer
@@ -264,12 +286,111 @@ footer {
     transform: translate(-100%, -50%);
     -webkit-transform: translate(-100%, -50%); }
 
+.navicon {
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  top: 10px;
+  right: 25px;
+  float: right;
+  padding: 50px;
+  display: none; }
+  .navicon .naviconIcon, .navicon .naviconIcon:before, .navicon .naviconIcon:after {
+    content: '';
+    height: 2px;
+    width: 35px;
+    background: #222;
+    position: absolute;
+    display: block;
+    transition: all .5s ease-in-out; }
+  .navicon .naviconIcon:before {
+    top: -10px; }
+  .navicon .naviconIcon:after {
+    bottom: -10px; }
+
+.navicon .naviconIcon2 {
+  cursor: pointer;
+  background-color: transparent; }
+.navicon .naviconIcon2:before, .navicon .naviconIcon2:after {
+  content: '';
+  height: 2px;
+  width: 35px;
+  background: #222;
+  position: absolute;
+  display: block;
+  transition: all .5s ease-in-out;
+  top: 0; }
+.navicon .naviconIcon2:before {
+  transform: rotate(-45deg); }
+.navicon .naviconIcon2:after {
+  transform: rotate(45deg); }
+
+.dropDown {
+  height: 60vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .dropDown ul {
+    list-style: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    padding: 0; }
+    .dropDown ul li {
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-align: center;
+      cursor: pointer;
+      padding: 5px;
+      text-transform: uppercase; }
+      .dropDown ul li:hover {
+        color: lime; }
+
+.logoSquare {
+  padding: 10px;
+  display: none;
+  background: white;
+  position: absolute;
+  color: #222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+  .logoSquare p {
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 40px;
+    border: 5px solid #222;
+    padding: 10px;
+    text-align: center; }
+
+.none {
+  display: none; }
+
 .about {
   font-family: 'Andale Mono', monospace;
   font-size: 20px;
-  padding: 100px 120px; }
-  .about p {
-    line-height: 2; }
+  padding: 100px 0;
+  display: block;
+  margin: 10px 0; }
+  .about .aboutText {
+    float: right;
+    width: 70%; }
+    .about .aboutText p {
+      line-height: 2; }
+
+.profpic {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin-right: 50px;
+  margin-top: 20px;
+  float: left; }
 
 .subHead {
   font-weight: normal;
@@ -285,7 +406,8 @@ footer {
   display: inline-block;
   vertical-align: top;
   border-right: 1px dotted #222;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  position: relative; }
   .featuredPortfolio:last-child {
     border: none; }
   .featuredPortfolio h2 {
@@ -310,6 +432,9 @@ footer {
         display: inline-block; }
   .featuredPortfolio .desc {
     margin-bottom: 20px; }
+  .featuredPortfolio .viewButtons {
+    position: absolute;
+    bottom: 20px; }
   .featuredPortfolio .viewLive {
     background: #222;
     color: white;
@@ -328,10 +453,10 @@ footer {
     .featuredPortfolio .viewLive p {
       margin: 0; }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
   .featuredPortfolio {
     width: 100%;
-    height: 500px;
+    height: 350px;
     border-right: none;
     border-bottom: 1px dotted #222;
     margin-bottom: 50px; }
@@ -339,13 +464,33 @@ footer {
       border-bottom: none; }
   .about {
     font-size: 18px;
-    padding: 80px 60px; } }
+    padding: 80px 60px; }
+    .about .aboutText {
+      width: 100%;
+      margin: 25px 0; }
+    .about .profpic {
+      margin: 0 auto;
+      width: 250px;
+      float: none;
+      display: block; } }
 
 @media (max-width: 600px) {
   .hero {
     height: 60vh; }
   .about {
     padding: 25px 20px; } }
+
+@media (min-width: 460px) {
+  .logoSquare {
+    display: none; } }
+
+@media (max-width: 460px) {
+  .hero .heroSVG {
+    display: none; }
+  .navicon {
+    display: inline-block; }
+  .logoSquare {
+    display: block; } }
 
 /* =============================================================================
                    Blog Landing Page / Index.php
@@ -361,6 +506,11 @@ footer {
     font-family: 'Andale Mono', monospace;
     margin: 0;
     margin-bottom: 20px; }
+  .portfolioPieces h4 {
+    font-family: 'Andale Mono';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
   .portfolioPieces .type {
     text-transform: uppercase;
     letter-spacing: 1.5px;

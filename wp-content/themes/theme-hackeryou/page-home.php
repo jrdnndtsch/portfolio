@@ -8,7 +8,7 @@ get_header();  ?>
 
 <div class="main">
   <div class="containerMain clearfix">
-    <div class="hero">
+    <div class="hero clearfix">
       <div class="heroSVG">
         <svg width="200%"  viewBox="0 0 600 336" version="1.1" xmlns="http://www.w3.org/2000/svg" id="header" >
           
@@ -42,10 +42,10 @@ get_header();  ?>
                 <path d="M349.75,150.5 L349.75,222.5" id="Line-10" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
                 <path d="M28.5,150.25 L573.5,150.25" id="Line-8" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
                 <g class="triangle1">
-                  <polygon id="Triangle-1" stroke="#070707" stroke-width="1.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(45.000000, 222.500000) rotate(-90.000000) translate(-45.000000, -222.500000) " points="45 214 55 231 35 231 "></polygon>
+                  <polygon id="Triangle-1" stroke="#070707" stroke-width="1.5" fill="lightgrey" sketch:type="MSShapeGroup" transform="translate(45.000000, 222.500000) rotate(-90.000000) translate(-45.000000, -222.500000) " points="45 214 55 231 35 231 "></polygon>
                 </g>
                 <g class="triangle2">  
-                  <polygon id="Triangle-2" stroke="#070707" stroke-width="1.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(554.000000, 223.500000) scale(-1, -1) rotate(-90.000000) translate(-554.000000, -223.500000) " points="554 215 564 232 544 232 "></polygon>
+                  <polygon id="Triangle-2" stroke="#070707" stroke-width="1.5" fill="lightgrey" sketch:type="MSShapeGroup" transform="translate(554.000000, 223.500000) scale(-1, -1) rotate(-90.000000) translate(-554.000000, -223.500000) " points="554 215 564 232 544 232 "></polygon>
                 </g>  
                 <path d="M35.25,209.5 L35.25,232.5" id="Line" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
                 <path d="M563.25,211.5 L563.25,234.5" id="Line-9" stroke="#070707" stroke-width="1.5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
@@ -76,7 +76,7 @@ get_header();  ?>
             </g>
             <style> 
               .link{
-        
+                fill:rgba(0, 0, 0, 0.7);
               }
               .link:hover{
                 fill:lime;
@@ -111,6 +111,20 @@ get_header();  ?>
             </style>
         </svg>
       </div>
+      <div class="logoSquare">
+        <p>JD</p>
+      </div> <!-- end .logoSquare -->
+      <div class="navicon">
+        <span class="naviconIcon"></span>
+      </div> <!-- end .heroBurger -->
+      <div class="dropDown">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="<?php echo get_permalink(50); ?>">Blog</a></li>
+          <li><a href="<?php echo get_permalink(77);?>">Portfolio</a></li>
+        </ul>
+      </div> <!-- end .dropDown -->
     </div>
     <div class="container">
     <?php // Start the loop ?>
@@ -118,10 +132,21 @@ get_header();  ?>
     <!-- About Info -->
 
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        <div class="about" id="about">
-          <p>
-          <?php the_field('about'); ?> 
-          </p>
+        <div class="about clearfix" id="about">
+          <?php
+            // $thumb_id = get_post_thumbnail_id();
+            // $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+            // $thumb_url = $thumb_url_array[0];
+          $thumb_url =  get_thumb_url('square');
+          ?>
+          <img class="profpic" src="<?php echo $thumb_url ?>" alt="">
+          <div class="aboutText"> 
+            <p>
+            <?php the_field('about'); ?> 
+            </p> 
+          </div>  
+          
+          <?//php pre_r(the_post_thumbnail($post->ID)); ?>
         </div>
     <?php endwhile; // end the loop?>
 
@@ -157,12 +182,14 @@ get_header();  ?>
          <div class="desc">
             <p> <?php the_field('short_desc'); ?></p>
         </div>
-        <div class="viewLive">
-          <a href="<?php echo get_permalink() ?>"><p>Learn More</p></a>
-        </div>
-        <div class="viewLive">
-           <a href="#"><p>View Live</p></a>
-        </div><!--  end .viewLive -->
+          <div class="viewButtons">
+          <div class="viewLive">
+            <a href="<?php echo get_permalink() ?>"><p>Learn More</p></a>  
+          </div>
+          <div class="viewLive">  
+             <a href="<?php the_field('live'); ?>" target="_"><p>View Live</p></a>
+          </div><!--  end .viewLive -->
+        </div><!-- end .viewButtons -->
         <?php endif; ?>
     	</div> <!-- end .featuredPortfolio -->
     <?php endwhile // end custom loop ?>

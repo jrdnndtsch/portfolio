@@ -24,6 +24,9 @@
           ?>
          </ul> 
         </div> <!-- end .tech -->
+        <div class="viewLive">
+          <a href="<?php the_field('live'); ?>" target="_"><p>View Live</p></a>
+        </div><!--  end .viewLive -->
      </div><!--  end. technologies -->
      <div class="portfolioDescription clearfix">
        <?php 
@@ -37,9 +40,6 @@
       <?php endwhile; ?>
      </div> <!-- end .portfolioDescription -->
 
-        <div class="viewLive">
-          <a href="<?php the_field('live'); ?>" target="_"><p>View Live</p></a>
-        </div><!--  end .viewLive -->
 
       </div> <!-- end .portfolioPieces -->
         <?php endif; ?>
